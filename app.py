@@ -34,7 +34,12 @@ st.write("Apna asset select karein aur gol daire par click karein.")
 # 1. User Inputs (Dropdown Boxes)
 col1, col2 = st.columns(2)
 with col1:
-    asset = st.selectbox("Country/Asset Select Karein", ["EURUSD", "GBPUSD", "USDJPY", "BTCUSD", "ETHUSD"])
+    asset = st.selectbox("Country/Asset Select Karein", [
+    "EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD", "EURGBP",
+    "BTCUSD", "ETHUSD", "SOLUSD", "DOGEUSD",
+    "GOLD", "SILVER",
+    "EURUSD_OTC", "GBPUSD_OTC", "USDJPY_OTC", "AUDUSD_OTC"
+])
 with col2:
     timeframe = st.selectbox("Timeframe Select Karein", ["1m", "5m", "15m"])
 
