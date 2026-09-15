@@ -47,8 +47,6 @@ else: tf = Interval.INTERVAL_15_MINUTES
 if 'trade_count' not in st.session_state:
     st.session_state.trade_count = 0
 
-st.subheaderf"Aaj ki Trades: {st.session_state.trade_count} / 2")
-
 # 2. Gol Daira (Button) Aur Signal Logic
 if st.session_state.trade_count >= 2:
     st.error("⚠️ Aapki aaj ke 2 signals ki limit poori ho chuki hai! Kal dobara aayin.")
