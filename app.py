@@ -26,7 +26,7 @@ st.markdown("""
         box-shadow: 0 0 25px #38bdf8 !important;
     }
     </style>
-""", unsafe_allowed_html=True)
+""", unsafe_allow_html=True)
 
 st.title("🎯 Quotex Smart Bot")
 st.write("Apna asset select karein aur gol daire par click karein.")
