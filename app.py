@@ -74,18 +74,18 @@ else:
                 
                 # Signal Faisla (EMA 200 aur RSI Strategy)
                 if close_price > ema200 and rsi <= 35:
-                    st.markdown("<h1 style='text-align: center; color: #22c55e;'>🟢 UP (CALL)</h1>", unsafe_allowed_html=True)
+                    st.markdown("<h1 style='text-align: center; color: #22c55e;'>🟢 UP (CALL)</h1>", unsafe_allow_html=True)
                     st.success(f"Mazboot Signal! Market up trend mein hai aur sasti hai. (RSI: {round(rsi,1)})")
                     st.session_state.trade_count += 1
                     st.balloons() # Kamyabi ki animation
                     
                 elif close_price < ema200 and rsi >= 65:
-                    st.markdown("<h1 style='text-align: center; color: #ef4444;'>🔴 DOWN (PUT)</h1>", unsafe_allowed_html=True)
+                    st.markdown("<h1 style='text-align: center; color: #ef4444;'>🔴 DOWN (PUT)</h1>", unsafe_allow_html=True)
                     st.error(f"Mazboot Signal! Market down trend mein hai aur mehangi hai. (RSI: {round(rsi,1)})")
                     st.session_state.trade_count += 1
                     
                 else:
-                    st.markdown("<h1 style='text-align: center; color: #94a3b8;'>⚪ WAIT</h1>", unsafe_allowed_html=True)
+                    st.markdown("<h1 style='text-align: center; color: #94a3b8;'>⚪ WAIT</h1>", unsafe_allow_html=True)
                     st.warning("Abhi market darmiyan mein hai. Sahi moka nahi hai, thodi der baad dobara click karein.")
                     
             except Exception as e:
